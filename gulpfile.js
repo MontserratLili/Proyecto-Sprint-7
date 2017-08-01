@@ -10,18 +10,18 @@ gulp.task('jade', function(){
         pretty: true
     }))
     .pipe(gulp.dest('./public'))
-})
+});
 
 gulp.task('watch', function(){
     gulp.watch('./src/*.jade', ['jade'])
 });
 
 gulp.task('sass', function(){
-    gulp.src('./src/scss/*.scss')
+    gulp.src('./src/assets/scss/main.scss')
         .pipe(sass({
         outputStyle: "compressed"
     }).on("error", sass.logError))
-    .pipe(gulp.dest('/css/'));
+    .pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('default', ['jade', 'watch', 'sass'])
+gulp.task('tarea', ['jade', 'watch', 'sass']);
