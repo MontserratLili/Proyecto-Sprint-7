@@ -2,8 +2,6 @@ var gulp = require('gulp');
 var jade = require('gulp-jade');
 var sass = require('gulp-sass');
 
-
-
 gulp.task('jade', function(){
     gulp.src('./src/*.jade')
     .pipe(jade({
@@ -17,11 +15,15 @@ gulp.task('watch', function(){
 });
 
 gulp.task('sass', function(){
-    gulp.src('./src/assets/scss/main.scss')
+    return gulp.src('scss/*.scss')
         .pipe(sass({
         outputStyle: "compressed"
     }).on("error", sass.logError))
-    .pipe(gulp.dest('./public/css'));
+    .pipe(gulp.dest('../public/css/*.css'));
 });
 
-gulp.task('tarea', ['jade', 'watch', 'sass']);
+gulp.task('sass:watch', function(){
+   gulp.watch('../src/scss/*.scss', ['sass']); 
+});
+
+gulp.task('tarea', ['jade', 'watch', 'sass:watch']);
