@@ -1,3 +1,26 @@
+mixin precios(imagen1, texto1, icono1, texto2, icono2, texto3, icono3, texto4, icono4, texto5, icono5, texto6, icono6, imagen2)
+    img(src="assets/images/pricing/#{imagen1}")
+    .row.gris
+        p.col-xs-9 #{texto1}
+        span.col-xs-3(class="glyphicon glyphicon-#{icono1}")
+    .row.gris
+        p.col-xs-9 #{texto2}
+        span.col-xs-3(class="glyphicon glyphicon-#{icono2}")
+    .row.gris
+        p.col-xs-9 #{texto3}
+        span.col-xs-3(class="glyphicon glyphicon-#{icono3}")
+    .row.gris
+        p.col-xs-9 #{texto4}
+        span.col-xs-3(class="glyphicon glyphicon-#{icono4}")
+    .row.gris
+        p.col-xs-9 #{texto5}
+        span.col-xs-3(class="glyphicon glyphicon-#{icono5}")
+    .row.gris
+        p.col-xs-9 #{texto6}
+        span.col-xs-3(class="glyphicon glyphicon-#{icono6}")
+    img(src="assets/images/pricing/#{imagen2}")
+           
+
 doctype html
 html
     head
@@ -34,12 +57,19 @@ html
             div.baner
                 h2 Princing Table
                 p Configure your princing table
-        
-        
-        
-        
-        
-        
+        section.row
+            .col-xs-3
+                +precios("titulo1.png", "Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove", "Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove","Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove", "footer1.png")
+                +precios("cabecera1.png", "Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove", "Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove","Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove", "pico1.png")
+            .col-xs-3
+                +precios("titulo2.png", "Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove", "Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove","Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove", "footer2.png")
+                +precios("cabecera2.png", "Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove", "Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove","Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove", "pico2.png")
+            .col-xs-3
+                +precios("titulo3.png", "Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove", "Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove","Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove", "footer3.png")
+                +precios("cabecera3.png", "Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove", "Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove","Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove", "pico3.png")
+            .col-xs-3
+                +precios("titulo4.png", "Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove", "Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove","Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove", "footer4.png")
+                +precios("cabecera4.png", "Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove", "Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove","Lorem ipsilum lorem", "ok", "Lorem ipsilum lorem", "remove", "pico4.png")
         section.row
             div
                 img.gotas(src="assets/images/home/under.png")
