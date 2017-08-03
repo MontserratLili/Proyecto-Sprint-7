@@ -1,3 +1,14 @@
+mixin cubos(imagen, texto)
+    .col-xs-3
+        img(src="assets/images/portfolio/#{imagen}")
+        p #{texto}
+
+
+mixin testimonios(imagen, testimonio)
+    .col-xs-offset-2.testimoniales
+        img.col-xs-4.img-responsive(src="assets/images/home/#{imagen}")
+        p.col-xs-8 #{testimonio}
+
 doctype html
 html
     head
@@ -32,56 +43,67 @@ html
                         span(class="glyphicon glyphicon-search" aria-hidden="true")
         section.row
             div.baner
-                h2 About Us
-                p Why our Clients love to work whit us.
+                h2 Portfolio
+                p Be Creative
         section.row
-            div.col-xs-6
-                img(src="assets/images/aboutus/1.png")
-            div.col-xs-6.parrafo
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit odit quidem laboriosam veritatis quae unde molestiae facilis eligendi eius, in accusamus repellendus. Delectus distinctio laboriosam odio commodi explicabo eos obcaecati.
+            div.col-xs-10
+                    ul.menu
+                        li.col-xs-1.col-xs-offset-2
+                        img(src="assets/images/portfolio/icon.png")
+                        li.col-xs-1 ALL
+                        li.col-xs-1 Branded
+                        li.col-xs-1 Desing
+                        li.col-xs-1 Folio
+                        li.col-xs-1 Logos
+                        li.col-xs-1 Mobile
+                        li.col-xs-1 Mockup
         section.row
-            mixin cubos(imagen, titulo, texto)
-                .col-xs-4.cubos
-                    img(src="assets/images/home/#{imagen}")
-                    h3 #{titulo}
-                    p #{texto}
-            +cubos("icon1.png", "responsive", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit odit quidem laboriosam veritatis quae unde molestiae facilis eligendi eius,")
-            +cubos("icon2.png", "responsive", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit odit quidem laboriosam veritatis quae unde molestiae facilis eligendi eius,")
-            +cubos("icon3.png", "responsive", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit odit quidem laboriosam veritatis quae unde molestiae facilis eligendi eius,")
+                +cubos("1.jpg", "Sailing Vivamus")
+                +cubos("2.jpg", "Sailing Vivamus")
+                +cubos("3.jpg", "Sailing Vivamus")
+                +cubos("4.jpg", "Sailing Vivamus")
+            .row
+                +cubos("5.jpg", "Sailing Vivamus")
+                +cubos("6.jpg", "Sailing Vivamus")
+                +cubos("7.jpg", "Sailing Vivamus")
+                +cubos("8.jpg", "Sailing Vivamus")
+            .row
+                +cubos("9.jpg", "Sailing Vivamus")
+                +cubos("10.jpg", "Sailing Vivamus")
+                +cubos("11.jpg", "Sailing Vivamus")
+                +cubos("12.jpg", "Sailing Vivamus")
+            .row
+                +cubos("13.jpg", "Sailing Vivamus")
+                +cubos("14.jpg", "Sailing Vivamus")
+                +cubos("15.jpg", "Sailing Vivamus")
+                +cubos("16.jpg", "Sailing Vivamus")
         section.row
-            div.baner.col-xs-6
-                h2 Triangle Corporate Template
-                p Why our Clients love to work whit us.
-            div.col-xs-6.col-xs-offset-6.moto
-                button.col-xs-4.col-xs-offset-2.botonMoto  TAKE THE TOUR
-                img.col-xs-6(src="assets/images/home/tour-icon2.png")
-        section.row
-            div.col-xs-6.col-xs-offset-3.cubos
-                h2 Meet the Team
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit odit quidem laboriosam veritatis quae unde molestiae facilis eligendi eius,
-        section.row.container
-            mixin cubos(imagen, titulo, texto)
-                .col-xs-3.cubos
-                    img.img-responsive(src="assets/images/aboutus/#{imagen}")
-                    h3 #{titulo}
-                    p #{texto}
-            +cubos("1.jpg", "John Doe", "CEO & Developer")
-            +cubos("2.jpg", "John Doe", "CEO & Developer")
-            +cubos("3.jpg", "John Doe", "CEO & Developer")
-            +cubos("4.jpg", "John Doe", "CEO & Developer")
+            div
+                    ul.menu
+                        li.col-xs-1
+                        img(src="assets/images/portfolio/left.png")
+                        li.col-xs-1 1
+                        li.col-xs-1 2
+                        li.col-xs-1 3
+                        li.col-xs-1 4
+                        li.col-xs-1 5
+                        li.col-xs-1 6
+                        li.col-xs-1 7
+                        li.col-xs-1 8
+                        li.col-xs-1 9
+                        li.col-xs-1
+                        img(src="assets/images/portfolio/right.png")
         section.row
             div
                 img.gotas(src="assets/images/home/under.png")
         section.row
             div.cohete
                 div.col-xs-5
-                    h2.row Testimonial
-                    mixin testimonios(imagen, testimonio)
-                        .col-xs-offset-2.testimoniales
-                            img.col-xs-4.img-responsive(src="assets/images/home/#{imagen}")
-                            p.col-xs-8 #{testimonio}
-                    +testimonios("profile1.png", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit odit quidem laboriosam veritatis quae unde molestiae facilis eligendi eius")
-                    +testimonios("profile2.png", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit odit quidem laboriosam veritatis quae unde molestiae facilis eligendi eius")
+                    h2 Testimonial
+                    .row
+                        +testimonios("profile1.png", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit odit quidem laboriosam veritatis quae unde molestiae facilis eligendi eius")
+                    .row
+                        +testimonios("profile2.png", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit odit quidem laboriosam veritatis quae unde molestiae facilis eligendi eius")
                 div.col-xs-2
                     h2 Contacts
                     p E-mail: email@email.com
